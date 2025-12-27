@@ -2,7 +2,7 @@
 """
 MGA MK2 Website Deploy Script
 Deploys to Railway via GitHub and creates a backup on Google Drive.
-Version: 1.2 - Folder snapshots instead of zip
+Version: 1.3 - Folder snapshots
 
 Usage:
     python3 deploy.py                    # Uses default timestamp message
