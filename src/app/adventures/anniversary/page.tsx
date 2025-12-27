@@ -83,6 +83,17 @@ export default function AnniversaryPage() {
                 className="object-contain rounded-lg shadow-lg"
               />
             </div>
+            <p className="text-lg mt-4 mb-4">
+              Here&apos;s a video of driving the &quot;High Road&quot; through the Scottish Highlands:
+            </p>
+            <video
+              controls
+              className="w-full rounded-lg shadow-lg"
+              preload="metadata"
+            >
+              <source src="/images/HighRoad.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </ContentCard>
 
           <ContentCard>
@@ -152,6 +163,28 @@ export default function AnniversaryPage() {
                 className="object-contain rounded-lg shadow-lg"
               />
             </div>
+            <p className="text-lg mt-4 mb-4">
+              Inside the Cavern Club:
+            </p>
+            <video
+              controls
+              className="w-full rounded-lg shadow-lg"
+              preload="metadata"
+            >
+              <source src="/images/CavernClub.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p className="text-lg mt-4 mb-4">
+              Ferry Cross the Mersey:
+            </p>
+            <video
+              controls
+              className="w-full rounded-lg shadow-lg"
+              preload="metadata"
+            >
+              <source src="/images/Mersey.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </ContentCard>
 
           <ContentCard>
