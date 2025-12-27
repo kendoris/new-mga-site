@@ -1,0 +1,57 @@
+============================================================
+         MGA MK2 WEBSITE - DEPLOYMENT GUIDE
+============================================================
+
+HOW TO DEPLOY THE WEBSITE
+-------------------------
+
+1. Open Terminal
+
+2. Go to the project folder:
+   cd /Users/kend/claudecodeprojects/MGAsite/mga-mk2-new
+
+3. Run the deploy script:
+   python3 deploy.py "Your message here"
+
+   Example:
+   python3 deploy.py "Added new photos"
+   python3 deploy.py "Fixed typo on history page"
+
+   Or just run with default message:
+   python3 deploy.py
+
+
+WHAT HAPPENS WHEN YOU DEPLOY
+----------------------------
+
+1. GITHUB: Your changes are pushed to GitHub
+   https://github.com/kendoris/new-mga-site
+
+2. RAILWAY: The website automatically updates (takes ~1 minute)
+   https://new-mega-site-production.up.railway.app
+
+3. BACKUP: A snapshot is saved to Google Drive
+   Location: My Drive/MGA-Website-Backups/
+
+
+QUICK REFERENCE
+---------------
+
+Deploy with message:    python3 deploy.py "Your message"
+Deploy with default:    python3 deploy.py
+View the live site:     https://new-mega-site-production.up.railway.app
+
+
+TROUBLESHOOTING
+---------------
+
+If Railway doesn't auto-deploy, run this manually:
+   railway up
+
+If you see "No changes to commit":
+   That's OK! It means there's nothing new to deploy.
+
+
+============================================================
+                    That's it!
+============================================================
