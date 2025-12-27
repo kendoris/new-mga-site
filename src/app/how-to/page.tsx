@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import ContentCard from '@/components/ContentCard';
-import { Terminal, Play, Eye, Rocket, MessageSquare, CheckCircle } from 'lucide-react';
+import { Terminal, Play, Eye, Rocket, MessageSquare, CheckCircle, Github, Cloud, HardDrive, AlertTriangle } from 'lucide-react';
 
 export default function HowToPage() {
   return (
@@ -164,7 +164,7 @@ export default function HowToPage() {
         </ContentCard>
 
         {/* Session Summary */}
-        <ContentCard className="bg-[var(--nav-bg)] text-white">
+        <ContentCard className="bg-[var(--nav-bg)] text-white mb-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Quick Session Summary</h2>
           <div className="space-y-3 text-lg">
             <div className="flex items-center gap-3">
@@ -186,6 +186,63 @@ export default function HowToPage() {
             <div className="flex items-center gap-3">
               <span className="bg-white text-[var(--nav-bg)] rounded-full w-8 h-8 flex items-center justify-center font-bold">5</span>
               <span>Check live site!</span>
+            </div>
+          </div>
+        </ContentCard>
+
+        {/* How Deploy Works */}
+        <h2 className="text-3xl font-bold text-[var(--nav-bg)] mb-4 text-center">
+          How the Deploy Works
+        </h2>
+        <p className="text-center text-lg mb-6 opacity-80">
+          When you deploy, three things happen automatically:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <ContentCard>
+            <div className="text-center">
+              <Github size={48} className="mx-auto mb-3 text-[var(--nav-bg)]" />
+              <h3 className="text-xl font-bold mb-2">1. GitHub</h3>
+              <p className="text-sm">
+                Your changes are pushed to GitHub, which stores all versions of the code.
+              </p>
+            </div>
+          </ContentCard>
+
+          <ContentCard>
+            <div className="text-center">
+              <Cloud size={48} className="mx-auto mb-3 text-[var(--nav-bg)]" />
+              <h3 className="text-xl font-bold mb-2">2. Railway</h3>
+              <p className="text-sm">
+                Railway detects the GitHub update and automatically rebuilds the live website.
+              </p>
+            </div>
+          </ContentCard>
+
+          <ContentCard>
+            <div className="text-center">
+              <HardDrive size={48} className="mx-auto mb-3 text-[var(--nav-bg)]" />
+              <h3 className="text-xl font-bold mb-2">3. Google Drive</h3>
+              <p className="text-sm">
+                A snapshot of the entire project is saved to Google Drive as a backup.
+              </p>
+            </div>
+          </ContentCard>
+        </div>
+
+        {/* Important Reminder */}
+        <ContentCard className="bg-yellow-50 border-2 border-yellow-400">
+          <div className="flex items-start gap-4">
+            <AlertTriangle size={32} className="text-yellow-600 shrink-0" />
+            <div>
+              <h3 className="text-xl font-bold text-yellow-800 mb-2">Important Reminder</h3>
+              <p className="text-lg text-yellow-900">
+                Make sure <strong>Google Drive Desktop</strong> is running when you work on the site.
+                This ensures your backups sync to the cloud automatically.
+              </p>
+              <p className="text-sm mt-2 opacity-70">
+                Look for the Google Drive icon in your menu bar at the top of the screen.
+              </p>
             </div>
           </div>
         </ContentCard>
