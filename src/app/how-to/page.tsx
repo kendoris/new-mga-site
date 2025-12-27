@@ -107,7 +107,7 @@ export default function HowToPage() {
               <h3 className="text-xl font-bold mb-2">2. Railway</h3>
               <p>Website updates automatically (~1 min)</p>
               <a
-                href="https://new-mega-site-production.up.railway.app"
+                href="https://new-mga-site.up.railway.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline text-sm"
