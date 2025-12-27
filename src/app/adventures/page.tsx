@@ -43,17 +43,17 @@ const adventures = [
   },
   {
     title: "Our Daughter's Wedding",
-    year: '',
+    year: '2014',
     slug: 'wedding',
     description: 'A special family moment where the MGA played a starring role in the celebration.',
     image: '/images/KarenPeteDriveAway.jpg',
   },
   {
     title: '50th Wedding Anniversary Trip',
-    year: '',
+    year: '2019',
     slug: 'anniversary',
-    description: 'Celebrating 50 years with a memorable journey.',
-    image: '/images/CliffsOfMoher.jpg',
+    description: 'UK and Ireland in a Morgan, E-Type Jaguar, and Audi! 2500 miles, 3 rental cars, 29 days, 4 countries.',
+    image: '/images/Morgan.jpg',
   },
   {
     title: 'Colorado GT-47 2022',
@@ -119,92 +119,6 @@ export default function AdventuresPage() {
           ))}
         </div>
 
-        {/* Featured: Colorado Trip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12"
-        >
-          <h2 className="text-3xl font-bold text-[var(--nav-bg)] mb-6 text-center">
-            Featured: Colorado GT-47 2022
-          </h2>
-          <ContentCard>
-            <div className="text-lg leading-relaxed space-y-4">
-              <p className="font-bold">
-                GT&apos;s are the annual main event for all MGA&apos;s. Originally scheduled for 2020,
-                the GT in Colorado Springs was postponed due to Covid.
-              </p>
-
-              <div className="relative w-full aspect-video my-6">
-                <Image
-                  src="/images/GT-47 Poster.jpeg"
-                  alt="GT-47 Poster"
-                  fill
-                  className="object-contain rounded-lg shadow-lg"
-                />
-              </div>
-
-              <p>
-                We planned the trip out as a leisurely 8 day drive through secondary roads,
-                passing through Georgia, Alabama, Tennessee, Kentucky, Missouri, and Kansas -
-                1770 miles to reach the DoubleTree hotel in Colorado Springs, then on to
-                Boulder to visit our daughter after the event.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/Flags.jpeg"
-                    alt="Memorial Day flags"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/GardenGods.jpeg"
-                    alt="Garden of the Gods"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/GlenEyrie.jpeg"
-                    alt="Glen Eyrie Castle"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/Broadmoor.jpeg"
-                    alt="The Broadmoor"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-
-              <p>
-                The car ran great the entire time, climbing as high as 8,800 feet in
-                temperatures over 90°. The only casualty was the speedometer which &quot;fried&quot;
-                its internal gears the last day of the trip - probably too much high speed
-                combined with really hot weather!
-              </p>
-
-              <div className="relative w-full aspect-[4/3] mt-6">
-                <Image
-                  src="/images/LastDay.jpeg"
-                  alt="Last day of the trip"
-                  fill
-                  className="object-contain rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </ContentCard>
-        </motion.div>
       </motion.div>
     </div>
   );

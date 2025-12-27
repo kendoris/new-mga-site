@@ -39,6 +39,15 @@ export default function WeddingPage() {
             </p>
             <p>
               Well, the rest became history, and was documented in the national <em>MGA!</em> magazine.
+              You can read the article Melon wrote for that issue{' '}
+              <a
+                href="/Wedding Article.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--nav-bg)] underline hover:opacity-80"
+              >
+                here
+              </a>.
             </p>
           </div>
         </ContentCard>

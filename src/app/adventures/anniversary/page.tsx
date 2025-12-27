@@ -136,23 +136,21 @@ export default function AnniversaryPage() {
               Despite the problems, the E-Jag got us to Liverpool - the place the Beatles became famous.
               Melon was in heaven!
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/Melon&Lads.jpg"
-                  alt="Melon with the Beatles statues"
-                  fill
-                  className="object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/Cavern.jpg"
-                  alt="The Cavern Club"
-                  fill
-                  className="object-cover rounded-lg shadow-lg"
-                />
-              </div>
+            <div className="relative aspect-[4/3] mb-4">
+              <Image
+                src="/images/Melon&Lads.jpg"
+                alt="Melon with the Beatles statues"
+                fill
+                className="object-contain rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/images/Cavern.jpg"
+                alt="The Cavern Club"
+                fill
+                className="object-contain rounded-lg shadow-lg"
+              />
             </div>
           </ContentCard>
 
@@ -195,6 +193,27 @@ export default function AnniversaryPage() {
             </p>
             <p className="text-lg mt-2">
               Great Trip - flew home with broad smiles and wonderful memories!
+            </p>
+            <p className="text-lg mt-4">
+              You can read more about the trip in the article Melon wrote for <em>MGA!</em> magazine.
+              It is a 4 page spread so it takes two PDF files -{' '}
+              <a
+                href="/FiveCars1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--nav-bg)] underline hover:opacity-80"
+              >
+                here
+              </a>
+              {' '}and{' '}
+              <a
+                href="/FiveCars2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--nav-bg)] underline hover:opacity-80"
+              >
+                here
+              </a>
             </p>
           </ContentCard>
         </div>
