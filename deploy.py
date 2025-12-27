@@ -2,6 +2,7 @@
 """
 MGA MK2 Website Deploy Script
 Deploys to Railway via GitHub and creates a backup on Google Drive.
+Version: 1.0
 """
 
 import subprocess
