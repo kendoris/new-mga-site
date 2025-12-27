@@ -2,7 +2,7 @@
 """
 MGA MK2 Website Deploy Script
 Deploys to Railway via GitHub and creates a backup on Google Drive.
-Version: 1.1
+Version: 1.2 - Folder snapshots instead of zip
 
 Usage:
     python3 deploy.py                    # Uses default timestamp message
@@ -12,7 +12,7 @@ Usage:
 import subprocess
 import os
 import sys
-import zipfile
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -71,44 +71,45 @@ def deploy_to_github(commit_message):
     return True
 
 
+def ignore_patterns(directory, files):
+    """Return files/folders to ignore during copy."""
+    ignored = []
+    for f in files:
+        # Check if it's an excluded directory
+        if f in EXCLUDE_DIRS:
+            ignored.append(f)
+        # Check if it's an excluded extension
+        elif any(f.endswith(ext) for ext in EXCLUDE_EXTENSIONS):
+            ignored.append(f)
+    return ignored
+
+
 def create_backup():
-    """Create a timestamped backup on Google Drive, excluding large folders."""
+    """Create a timestamped folder snapshot on Google Drive, excluding large folders."""
     print("\n💾 CREATING BACKUP ON GOOGLE DRIVE")
 
     # Create backup folder if it doesn't exist
     BACKUP_FOLDER.mkdir(parents=True, exist_ok=True)
 
-    # Create timestamped archive name
+    # Create timestamped snapshot folder name
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    archive_name = f"mga-mk2-backup_{timestamp}.zip"
-    archive_path = BACKUP_FOLDER / archive_name
+    snapshot_name = f"mga-mk2-backup_{timestamp}"
+    snapshot_path = BACKUP_FOLDER / snapshot_name
 
-    print(f"📦 Creating archive: {archive_name}")
+    print(f"📂 Creating snapshot: {snapshot_name}")
     print(f"   Excluding: {', '.join(EXCLUDE_DIRS)}")
 
-    # Create zip with exclusions
-    file_count = 0
-    with zipfile.ZipFile(archive_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        for file_path in PROJECT_DIR.rglob('*'):
-            # Skip excluded directories
-            if any(excluded in file_path.parts for excluded in EXCLUDE_DIRS):
-                continue
-            # Skip excluded extensions
-            if file_path.suffix in EXCLUDE_EXTENSIONS:
-                continue
-            # Skip the backup file itself
-            if file_path == archive_path:
-                continue
-            # Only add files, not directories
-            if file_path.is_file():
-                arcname = file_path.relative_to(PROJECT_DIR)
-                zipf.write(file_path, arcname)
-                file_count += 1
+    # Copy folder with exclusions
+    shutil.copytree(PROJECT_DIR, snapshot_path, ignore=ignore_patterns)
 
-    # Get file size
-    size_mb = archive_path.stat().st_size / (1024 * 1024)
+    # Count files in snapshot
+    file_count = sum(1 for _ in snapshot_path.rglob('*') if _.is_file())
 
-    print(f"✅ Backup created: {archive_name}")
+    # Get total size
+    total_size = sum(f.stat().st_size for f in snapshot_path.rglob('*') if f.is_file())
+    size_mb = total_size / (1024 * 1024)
+
+    print(f"✅ Snapshot created: {snapshot_name}")
     print(f"   Files: {file_count}")
     print(f"   Size: {size_mb:.1f} MB")
     print(f"📁 Location: {BACKUP_FOLDER}")
