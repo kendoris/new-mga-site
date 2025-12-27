@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import ContentCard from '@/components/ContentCard';
-import { Terminal, Play, Eye, Rocket, MessageSquare, CheckCircle, Github, Cloud, HardDrive, AlertTriangle } from 'lucide-react';
+import { Terminal, Play, Eye, Rocket, MessageSquare, CheckCircle, Github, Cloud, HardDrive, AlertTriangle, Sparkles } from 'lucide-react';
 
 export default function HowToPage() {
   return (
@@ -232,7 +232,7 @@ export default function HowToPage() {
         </div>
 
         {/* Important Reminder */}
-        <ContentCard className="bg-yellow-50 border-2 border-yellow-400">
+        <ContentCard className="bg-yellow-50 border-2 border-yellow-400 mb-6">
           <div className="flex items-start gap-4">
             <AlertTriangle size={32} className="text-yellow-600 shrink-0" />
             <div>
@@ -243,6 +243,29 @@ export default function HowToPage() {
               </p>
               <p className="text-sm mt-2 opacity-70">
                 Look for the Google Drive icon in your menu bar at the top of the screen.
+              </p>
+            </div>
+          </div>
+        </ContentCard>
+
+        {/* Get Creative */}
+        <ContentCard className="bg-blue-50 border-2 border-blue-400">
+          <div className="flex items-start gap-4">
+            <Sparkles size={32} className="text-blue-600 shrink-0" />
+            <div>
+              <h3 className="text-xl font-bold text-blue-800 mb-2">Get Creative!</h3>
+              <p className="text-lg text-blue-900 mb-3">
+                Claude Code can do a lot more than simple edits. Feel free to dream big!
+              </p>
+              <p className="text-blue-900 mb-2">You could ask Claude to:</p>
+              <ul className="list-disc list-inside text-blue-900 space-y-1">
+                <li>Build an admin section for making changes without code</li>
+                <li>Add new pages or entirely new features</li>
+                <li>Redesign sections of the site</li>
+                <li>Add photo slideshows, maps, or interactive elements</li>
+              </ul>
+              <p className="text-lg text-blue-900 mt-3 font-medium">
+                You can do more than you think — just ask!
               </p>
             </div>
           </div>
