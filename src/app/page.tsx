@@ -1,65 +1,146 @@
-import Image from "next/image";
+'use client';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import ContentCard from '@/components/ContentCard';
+import Timeline from '@/components/Timeline';
+
+const timelineEvents = [
+  {
+    year: '1968',
+    title: 'The Beginning',
+    description: 'We bought the MGA and drove it for 5 years before retiring it to the garage.',
+  },
+  {
+    year: '1969',
+    title: 'Christmas',
+    description: 'As newlyweds with two roadsters, we figured out how to cart a Christmas tree home - feed the A some pine!',
+  },
+  {
+    year: '1970s',
+    title: 'First Steps & Repairs',
+    description: 'Learning the ins and outs of maintaining a classic British sports car.',
+  },
+  {
+    year: '2004',
+    title: 'The Restoration',
+    description: 'After 30 years in the garage, we decided it was finally time to get it back on the road.',
+  },
+  {
+    year: '2006',
+    title: 'Key West Regional',
+    description: 'Taking the restored MGA to shows and meeting fellow enthusiasts.',
+  },
+  {
+    year: '2010',
+    title: 'Cape Breton Adventure',
+    description: 'A 2400 mile, 8 day round trip to Cape Breton in Nova Scotia.',
+  },
+  {
+    year: '2022',
+    title: 'Colorado GT-47',
+    description: '4,100 mile round trip to Colorado Springs, climbing as high as 8,800 feet!',
+  },
+];
+
+const quickLinks = [
+  { href: '/history', title: 'History', description: 'How it all began' },
+  { href: '/restoration', title: 'Restoration', description: 'The rebuild journey' },
+  { href: '/adventures', title: 'Adventures', description: 'Road trips & events' },
+  { href: '/gallery', title: 'Gallery', description: 'Photo collection' },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Hero Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--nav-bg)] mb-4">
+          1962 MGA 1600 MKII
+        </h1>
+        <p className="text-xl md:text-2xl text-[var(--foreground)] opacity-80 italic">
+          A Journey Since 1968
+        </p>
+      </motion.div>
+
+      {/* Introduction with Images */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <ContentCard className="mb-12">
+          <blockquote className="text-lg leading-relaxed italic text-center mb-6 border-l-4 border-[var(--nav-bg)] pl-4">
+            <p className="font-bold">Well, it was Melon&apos;s first car.</p>
+            <p>We bought it in 1968 and drove it for 5 years before retiring it to the garage.</p>
+          </blockquote>
+
+          <div className="relative w-full max-w-xl mx-auto aspect-[4/3] mb-6">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/MelonMGA-Day1.jpg"
+              alt="Melon's new MGA 1968"
+              fill
+              className="object-contain rounded-lg shadow-lg border-4 border-white"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+
+          <blockquote className="text-lg leading-relaxed italic text-center mb-6 border-l-4 border-[var(--nav-bg)] pl-4">
+            <p>In January of 2004 we decided that it was finally time to get it back on the road, so we unstacked all the garden tools, toys, etc., and found this underneath it all:</p>
+          </blockquote>
+
+          <div className="relative w-full max-w-xl mx-auto aspect-[4/3]">
+            <Image
+              src="/images/mgabefore.jpg"
+              alt="MGA Before Restoration"
+              fill
+              className="object-contain rounded-lg shadow-lg border-4 border-white"
+            />
+          </div>
+        </ContentCard>
+      </motion.div>
+
+      {/* Quick Links */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+      >
+        {quickLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="group"
           >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-[var(--nav-bg)] text-white rounded-lg p-4 md:p-6 text-center transition-colors duration-300 group-hover:bg-[var(--nav-hover)] group-hover:text-[var(--nav-bg)]"
+            >
+              <h3 className="font-bold text-lg mb-1">{link.title}</h3>
+              <p className="text-sm opacity-80">{link.description}</p>
+            </motion.div>
+          </Link>
+        ))}
+      </motion.div>
+
+      {/* Timeline Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <h2 className="text-3xl font-bold text-[var(--nav-bg)] text-center mb-8">
+          Our Journey Through Time
+        </h2>
+        <Timeline events={timelineEvents} />
+      </motion.div>
     </div>
   );
 }
