@@ -34,13 +34,14 @@ export default function HowToPage() {
               </p>
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono space-y-2">
                 <div><span className="text-gray-500"># Go to the project folder</span></div>
-                <div>cd /Users/kend/claudecodeprojects/MGAsite/mga-mk2-new</div>
+                <div>cd /Users/kend/claudecodeprojects/MGAsite/</div>
                 <div>&nbsp;</div>
                 <div><span className="text-gray-500"># Start Claude Code</span></div>
                 <div>claude</div>
               </div>
               <p className="text-sm mt-3 opacity-70">
                 Claude will start and you can chat with it to make changes to the website.
+                This folder contains both the new site and the old site for reference.
               </p>
             </div>
           </div>
@@ -169,7 +170,7 @@ export default function HowToPage() {
           <div className="space-y-3 text-lg">
             <div className="flex items-center gap-3">
               <span className="bg-white text-[var(--nav-bg)] rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
-              <span>cd mga-mk2-new → claude</span>
+              <span>cd MGAsite → claude</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="bg-white text-[var(--nav-bg)] rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
