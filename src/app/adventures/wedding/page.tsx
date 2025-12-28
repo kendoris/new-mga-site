@@ -2,14 +2,15 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import ClickableImage from '@/components/ClickableImage';
+import ClickableImage, { PageLightboxManager } from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
 export default function WeddingPage() {
   return (
-    
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <>
+      <PageLightboxManager />
+      <div className="max-w-4xl mx-auto px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -116,7 +117,7 @@ export default function WeddingPage() {
           </ContentCard>
         </div>
       </motion.div>
-    </div>
-    
+      </div>
+    </>
   );
 }
