@@ -83,10 +83,10 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <ContentCard className="mb-12">
-          <blockquote className="text-lg leading-relaxed italic text-center mb-6 border-l-4 border-[var(--nav-bg)] pl-4">
+          <div className="text-lg leading-relaxed italic text-center mb-6">
             <p className="font-bold">Well, it was Melon&apos;s first car.</p>
             <p>We bought it in 1968 and drove it for 5 years before retiring it to the garage.</p>
-          </blockquote>
+          </div>
 
           <div className="relative w-full max-w-xl mx-auto aspect-[4/3] mb-6">
             <Image
@@ -97,9 +97,9 @@ export default function Home() {
             />
           </div>
 
-          <blockquote className="text-lg leading-relaxed italic text-center mb-6 border-l-4 border-[var(--nav-bg)] pl-4">
+          <div className="text-lg leading-relaxed italic text-center mb-6">
             <p>In January of 2004 we decided that it was finally time to get it back on the road, so we unstacked all the garden tools, toys, etc., and found this underneath it all:</p>
-          </blockquote>
+          </div>
 
           <div className="relative w-full max-w-xl mx-auto aspect-[4/3]">
             <Image
