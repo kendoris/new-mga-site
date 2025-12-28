@@ -9,7 +9,6 @@
 
 ### Features
 - [ ] Add search functionality
-- [ ] Add lightbox/modal for full-screen image viewing in gallery
 - [ ] Add "Back to top" button on long pages
 - [ ] Consider adding a contact form
 
@@ -28,12 +27,19 @@
 - Videos are stored in `/public/images/` alongside photos
 - PDFs are in `/public/` root
 - Original site source is at `/Users/kend/Documents/mga-mk2 website/`
+- Vercel Analytics enabled - view in Vercel dashboard
 
-## Completed
+## Completed (Dec 2024)
 - [x] All 8 adventure pages with full content
 - [x] All 5 history sub-pages
 - [x] Colorado videos (3)
 - [x] Anniversary videos (3)
 - [x] PDF article links (Savannah, Wedding, Anniversary)
 - [x] Vercel deployment with auto-deploy from GitHub
-- [x] Custom domain setup
+- [x] Custom domain setup (mga-mk2.com)
+- [x] Railway backup deployment
+- [x] Clickable images with lightbox on all pages
+- [x] Cycling arrows to navigate through all page images
+- [x] Clickable timeline on home page
+- [x] Videos section in Gallery
+- [x] Vercel Analytics for visitor tracking
