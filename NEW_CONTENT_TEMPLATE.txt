@@ -1,0 +1,111 @@
+===============================================
+MGA MK2 WEBSITE - NEW PAGE CONTENT TEMPLATE
+===============================================
+
+PAGE TITLE: [e.g., "Asheville GT-38" or "Engine Rebuild"]
+
+PAGE TYPE: [ ] Adventure  [ ] History  [ ] How-To
+
+SUBTITLE/DATE: [e.g., "September 2013 - 800 miles round trip"]
+
+-----------------------------------------------
+INTRODUCTION
+-----------------------------------------------
+[Opening paragraph that sets the scene. This appears at the top of the page in a highlighted card.]
+
+
+
+
+-----------------------------------------------
+MAIN CONTENT
+-----------------------------------------------
+[Write your story naturally. I'll break it into sections with images.]
+
+Section 1:
+[Your text here...]
+
+[IMAGE: filename.jpg]
+[CAPTION: Description of the image]
+
+Section 2:
+[Your text here...]
+
+[IMAGE: filename2.jpg]
+[CAPTION: Another description]
+
+[You can have multiple images in a section:]
+[IMAGE: filename3.jpg]
+[CAPTION: Left image description]
+[IMAGE: filename4.jpg]
+[CAPTION: Right image description]
+[LAYOUT: side-by-side]
+
+-----------------------------------------------
+VIDEOS (if any)
+-----------------------------------------------
+[VIDEO: videoname.mp4]
+[CAPTION: Description of video]
+
+-----------------------------------------------
+CLOSING
+-----------------------------------------------
+[Final paragraph or summary - trip stats, memorable moments, etc.]
+
+
+
+
+-----------------------------------------------
+IMAGE LIST
+-----------------------------------------------
+[List all image files you're providing, so I can verify none are missing]
+
+1. filename.jpg - Description
+2. filename2.jpg - Description
+3. filename3.jpg - Description
+...
+
+-----------------------------------------------
+NOTES FOR CLAUDE
+-----------------------------------------------
+[Any special requests - layout preferences, links to other pages, etc.]
+
+
+
+
+===============================================
+EXAMPLE (abbreviated):
+===============================================
+
+PAGE TITLE: Blue Ridge Adventure
+PAGE TYPE: [x] Adventure
+SUBTITLE/DATE: October 2024 - 500 miles
+
+INTRODUCTION:
+After years of wanting to drive the Blue Ridge Parkway, we finally made it happen in the fall of 2024.
+
+MAIN CONTENT:
+
+Section 1:
+We left Beaufort early on a crisp October morning, the MGA running perfectly after a fresh tune-up.
+
+[IMAGE: departure.jpg]
+[CAPTION: Ready to roll at 6 AM]
+
+Section 2:
+The parkway views were spectacular, with fall colors at their peak.
+
+[IMAGE: overlook1.jpg]
+[CAPTION: View from Craggy Gardens]
+[IMAGE: overlook2.jpg]
+[CAPTION: The MGA at Mile High Overlook]
+[LAYOUT: side-by-side]
+
+CLOSING:
+500 miles, zero breakdowns, and a lifetime of memories.
+
+IMAGE LIST:
+1. departure.jpg - MGA in driveway at dawn
+2. overlook1.jpg - Mountain vista with fall colors
+3. overlook2.jpg - Car parked at overlook
+
+===============================================

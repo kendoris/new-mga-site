@@ -85,13 +85,14 @@ src/app/
 
 ## Deployment
 
-The site auto-deploys to Vercel on every push to the `main` branch.
-
+**Use the deploy script** (commits, pushes, and backs up to Google Drive):
 ```bash
-git add -A
-git commit -m "Your message"
-git push origin main
+python3 deploy.py "Your commit message"
 ```
+
+This script:
+1. Commits and pushes to GitHub (triggers Vercel auto-deploy)
+2. Creates timestamped backup on Google Drive (excludes node_modules, .next, .git)
 
 ### Vercel Analytics
 Analytics is enabled via `@vercel/analytics` in `layout.tsx`. View stats in the Vercel dashboard → Analytics tab.
@@ -100,6 +101,23 @@ Analytics is enabled via `@vercel/analytics` in `layout.tsx`. View stats in the 
 ```bash
 railway up
 ```
+
+## Adding New Content
+
+A template is provided at `NEW_CONTENT_TEMPLATE.txt` for the user to create new pages.
+
+**Preferred format from user:**
+- Plain text file (.txt or .md) with narrative
+- Images as separate files in a folder
+- Reference images in text: `[IMAGE: filename.jpg]` with `[CAPTION: description]`
+- Use `[LAYOUT: side-by-side]` for paired images
+
+**When implementing new content:**
+1. Create new page folder (e.g., `src/app/adventures/newtrip/`)
+2. Copy images to `/public/images/`
+3. Create `page.tsx` following existing adventure/history page patterns
+4. Add `PageLightboxManager` and use `ClickableImage` for photos
+5. Update the landing page (adventures or history) to include card for new page
 
 ## Original Source
 
@@ -115,8 +133,10 @@ npm run build  # Production build
 ## Recent Changes (Dec 2024)
 
 - Added clickable images with cycling lightbox arrows on all adventure/history/restoration pages
+- Added pinch-to-zoom on mobile for lightbox images (Zoom plugin)
 - Added Vercel Analytics for visitor tracking
 - Made home page timeline items clickable
 - Added videos section to Gallery page
 - Added PDF article links to Savannah, Wedding, and Anniversary pages
 - Created 5 history sub-pages (Christmas 1969, Roadside Repairs, Body Work, First Steps, First Award)
+- Created NEW_CONTENT_TEMPLATE.txt for user to prepare new page content
