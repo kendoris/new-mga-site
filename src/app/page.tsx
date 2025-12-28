@@ -11,36 +11,43 @@ const timelineEvents = [
     year: '1968',
     title: 'The Beginning',
     description: 'We bought the MGA and drove it for 5 years before retiring it to the garage.',
+    href: '/history',
   },
   {
     year: '1969',
     title: 'Christmas',
     description: 'As newlyweds with two roadsters, we figured out how to cart a Christmas tree home - feed the A some pine!',
+    href: '/history/christmas-1969',
   },
   {
     year: '1970s',
-    title: 'First Steps & Repairs',
-    description: 'Learning the ins and outs of maintaining a classic British sports car.',
+    title: 'Roadside Repairs',
+    description: 'Learning the ins and outs of maintaining a classic British sports car - including a fuel pump fix with a paper clip!',
+    href: '/history/roadside-repairs',
   },
   {
     year: '2004',
     title: 'The Restoration',
     description: 'After 30 years in the garage, we decided it was finally time to get it back on the road.',
+    href: '/history/first-steps',
   },
   {
     year: '2006',
     title: 'Key West Regional',
     description: 'Taking the restored MGA to shows and meeting fellow enthusiasts.',
+    href: '/adventures/keywest',
   },
   {
     year: '2010',
     title: 'Cape Breton Adventure',
     description: 'A 2400 mile, 8 day round trip to Cape Breton in Nova Scotia.',
+    href: '/adventures/capebreton',
   },
   {
     year: '2022',
     title: 'Colorado GT-47',
     description: '4,100 mile round trip to Colorado Springs, climbing as high as 8,800 feet!',
+    href: '/adventures/colorado',
   },
 ];
 

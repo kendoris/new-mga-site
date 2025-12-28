@@ -109,6 +109,15 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
   { src: '/images/LastDay.jpeg', alt: 'Last day', caption: 'Colorado 2022 - Final day', category: 'trips' },
 ];
 
+const galleryVideos = [
+  { src: '/images/HighRoad.mp4', title: 'Scottish Highlands', caption: '50th Anniversary Trip - Driving the High Road' },
+  { src: '/images/CavernClub.mp4', title: 'The Cavern Club', caption: '50th Anniversary Trip - Inside the famous Beatles venue' },
+  { src: '/images/Mersey.mp4', title: 'Ferry Cross the Mersey', caption: '50th Anniversary Trip - Liverpool waterfront' },
+  { src: '/images/Bridge.mp4', title: 'Mississippi River Crossing', caption: 'Colorado GT-47 - Historic Cairo Bridge' },
+  { src: '/images/RoyalGorgeBridgeOverview.mp4', title: 'Royal Gorge Bridge', caption: 'Colorado GT-47 - 955 feet above the Arkansas River' },
+  { src: '/images/MelonBridge.mp4', title: 'Melon Crosses the Bridge', caption: 'Colorado GT-47 - Braving the Royal Gorge' },
+];
+
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
 
@@ -149,6 +158,38 @@ export default function GalleryPage() {
 
         {/* Image Gallery */}
         <ImageGallery images={filteredImages} columns={3} />
+
+        {/* Video Gallery */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-[var(--nav-bg)] mb-8 text-center">
+            Videos
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {galleryVideos.map((video, index) => (
+              <div key={index} className="bg-[var(--content-bg)] rounded-lg p-4 shadow-md">
+                <video
+                  controls
+                  className="w-full rounded-lg"
+                  preload="metadata"
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <h3 className="text-lg font-bold text-[var(--nav-bg)] mt-3">
+                  {video.title}
+                </h3>
+                <p className="text-sm text-[var(--foreground)] opacity-80">
+                  {video.caption}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
