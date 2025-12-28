@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 MGA MK2 Website Deploy Script
-Deploys to Railway via GitHub and creates a backup on Google Drive.
-Version: 1.3 - Folder snapshots
+Deploys to Vercel via GitHub and creates a backup on Google Drive.
+Version: 1.4 - Added README.txt to snapshots
 
 Usage:
     python3 deploy.py                    # Uses default timestamp message
@@ -44,9 +44,65 @@ def run_command(command, description):
     return result.returncode == 0
 
 
+def get_git_info():
+    """Get current git commit information."""
+    info = {}
+
+    # Get latest commit hash
+    result = subprocess.run(
+        "git log -1 --format='%H'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['commit_hash'] = result.stdout.strip().strip("'") if result.returncode == 0 else "Unknown"
+
+    # Get short hash
+    result = subprocess.run(
+        "git log -1 --format='%h'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['commit_short'] = result.stdout.strip().strip("'") if result.returncode == 0 else "Unknown"
+
+    # Get commit date
+    result = subprocess.run(
+        "git log -1 --format='%ci'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['commit_date'] = result.stdout.strip().strip("'") if result.returncode == 0 else "Unknown"
+
+    # Get commit author
+    result = subprocess.run(
+        "git log -1 --format='%an <%ae>'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['commit_author'] = result.stdout.strip().strip("'") if result.returncode == 0 else "Unknown"
+
+    # Get commit message
+    result = subprocess.run(
+        "git log -1 --format='%s'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['commit_message'] = result.stdout.strip().strip("'") if result.returncode == 0 else "Unknown"
+
+    # Get recent commits (last 5)
+    result = subprocess.run(
+        "git log -5 --format='  %h - %s (%cr)'",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['recent_commits'] = result.stdout.strip() if result.returncode == 0 else "Unknown"
+
+    # Get current branch
+    result = subprocess.run(
+        "git branch --show-current",
+        shell=True, capture_output=True, text=True, cwd=PROJECT_DIR
+    )
+    info['branch'] = result.stdout.strip() if result.returncode == 0 else "Unknown"
+
+    return info
+
+
 def deploy_to_github(commit_message):
     """Stage, commit, and push to GitHub."""
-    print("\n🚀 DEPLOYING TO GITHUB (triggers Railway auto-deploy)")
+    print("\n🚀 DEPLOYING TO GITHUB (triggers Vercel auto-deploy)")
 
     # Check for changes
     result = subprocess.run("git status --porcelain", shell=True, capture_output=True, text=True, cwd=PROJECT_DIR)
@@ -67,7 +123,7 @@ def deploy_to_github(commit_message):
     if not run_command("git push origin main", "Pushing to GitHub"):
         return False
 
-    print("\n✅ Pushed to GitHub! Railway will auto-deploy.")
+    print("\n✅ Pushed to GitHub! Vercel will auto-deploy.")
     return True
 
 
@@ -84,7 +140,62 @@ def ignore_patterns(directory, files):
     return ignored
 
 
-def create_backup():
+def create_readme(snapshot_path, commit_message, git_info, file_count, size_mb):
+    """Create a README.txt file in the snapshot with metadata."""
+    readme_path = snapshot_path / "README.txt"
+
+    now = datetime.now()
+
+    content = f"""===============================================
+MGA MK2 WEBSITE BACKUP
+===============================================
+
+SNAPSHOT INFORMATION
+--------------------
+Date:           {now.strftime('%Y-%m-%d %H:%M:%S')}
+Backup Folder:  {snapshot_path.name}
+Files:          {file_count}
+Size:           {size_mb:.1f} MB
+
+DESCRIPTION
+-----------
+{commit_message}
+
+GIT COMMIT INFORMATION
+----------------------
+Branch:         {git_info['branch']}
+Commit Hash:    {git_info['commit_hash']}
+Short Hash:     {git_info['commit_short']}
+Commit Date:    {git_info['commit_date']}
+Author:         {git_info['commit_author']}
+Message:        {git_info['commit_message']}
+
+RECENT COMMITS
+--------------
+{git_info['recent_commits']}
+
+EXCLUDED FROM BACKUP
+--------------------
+{', '.join(sorted(EXCLUDE_DIRS))}
+
+LIVE SITE
+---------
+https://www.mga-mk2.com
+
+GITHUB REPOSITORY
+-----------------
+https://github.com/kendoris/new-mga-site
+
+===============================================
+"""
+
+    with open(readme_path, 'w') as f:
+        f.write(content)
+
+    return readme_path
+
+
+def create_backup(commit_message):
     """Create a timestamped folder snapshot on Google Drive, excluding large folders."""
     print("\n💾 CREATING BACKUP ON GOOGLE DRIVE")
 
@@ -109,9 +220,14 @@ def create_backup():
     total_size = sum(f.stat().st_size for f in snapshot_path.rglob('*') if f.is_file())
     size_mb = total_size / (1024 * 1024)
 
+    # Get git info and create README
+    git_info = get_git_info()
+    readme_path = create_readme(snapshot_path, commit_message, git_info, file_count, size_mb)
+
     print(f"✅ Snapshot created: {snapshot_name}")
     print(f"   Files: {file_count}")
     print(f"   Size: {size_mb:.1f} MB")
+    print(f"   README: {readme_path.name}")
     print(f"📁 Location: {BACKUP_FOLDER}")
 
     return True
@@ -134,7 +250,7 @@ def main():
     github_success = deploy_to_github(commit_message)
 
     # Create backup
-    backup_success = create_backup()
+    backup_success = create_backup(commit_message)
 
     # Summary
     print("\n" + "="*60)
