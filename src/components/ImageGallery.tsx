@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 
 export interface GalleryImage {
@@ -59,6 +60,11 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
         close={() => setLightboxOpen(false)}
         index={photoIndex}
         slides={images.map((img) => ({ src: img.src, alt: img.alt }))}
+        plugins={[Zoom]}
+        zoom={{
+          maxZoomPixelRatio: 3,
+          scrollToZoom: true
+        }}
       />
     </>
   );
