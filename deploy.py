@@ -142,7 +142,7 @@ def main():
     print("="*60)
     print(f"   GitHub Deploy: {'✅ Success' if github_success else '❌ Failed'}")
     print(f"   Google Drive Backup: {'✅ Success' if backup_success else '❌ Failed'}")
-    print(f"\n🌐 Live site: https://new-mga-site.up.railway.app")
+    print(f"\n🌐 Live site: https://www.mga-mk2.com")
     print(f"📂 GitHub: https://github.com/kendoris/new-mga-site")
     print("="*60 + "\n")
 
