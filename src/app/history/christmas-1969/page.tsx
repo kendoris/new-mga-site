@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -35,7 +36,7 @@ export default function Christmas1969Page() {
 
         <div className="space-y-8">
           <div className="relative aspect-[5/4] w-full">
-            <Image
+            <ClickableImage
               src="/images/Melon and cars 1969.jpg"
               alt="Melon with both cars in 1969"
               fill
@@ -51,7 +52,7 @@ export default function Christmas1969Page() {
           </ContentCard>
 
           <div className="relative aspect-[4/3] w-full">
-            <Image
+            <ClickableImage
               src="/images/mga_and_christmas_tree.jpg"
               alt="MGA with Christmas tree"
               fill
@@ -66,7 +67,7 @@ export default function Christmas1969Page() {
           </ContentCard>
 
           <div className="relative aspect-square w-full max-w-xl mx-auto">
-            <Image
+            <ClickableImage
               src="/images/melonandtree.jpg"
               alt="Melon with the Christmas tree"
               fill

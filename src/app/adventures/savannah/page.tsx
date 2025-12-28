@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -42,7 +43,7 @@ export default function SavannahPage() {
         <div className="space-y-8">
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/IMG_1592.jpg"
                 alt="Sunrise in Kitty Hawk"
                 fill
@@ -65,7 +66,7 @@ export default function SavannahPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/RhettInn.jpg"
                 alt="Rhett House Inn in Beaufort, SC"
                 fill
@@ -84,7 +85,7 @@ export default function SavannahPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MGA in Beaufort.JPG"
                 alt="MGA in Beaufort, SC"
                 fill
@@ -101,7 +102,7 @@ export default function SavannahPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Magnette and As.jpg"
                 alt="MGAs and Magnette at the hotel"
                 fill
@@ -120,7 +121,7 @@ export default function SavannahPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MelonAtTybeeLighthouse.JPG"
                 alt="Melon at Tybee Lighthouse"
                 fill
@@ -137,7 +138,7 @@ export default function SavannahPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MGAsFerry.jpg"
                 alt="MGAs on the Ferry"
                 fill

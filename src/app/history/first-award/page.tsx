@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -50,7 +51,7 @@ export default function FirstAwardPage() {
         </ContentCard>
 
         <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto">
-          <Image
+          <ClickableImage
             src="/images/IMG_0153.JPG"
             alt="Ken and Melon with their People's Choice Award"
             fill

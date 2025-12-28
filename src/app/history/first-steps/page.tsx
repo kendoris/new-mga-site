@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -41,7 +42,7 @@ export default function FirstStepsPage() {
         </ContentCard>
 
         <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto">
-          <Image
+          <ClickableImage
             src="/images/ken_and_kyle_mga.jpg"
             alt="Ken and Kyle in the MGA for the first ride"
             fill

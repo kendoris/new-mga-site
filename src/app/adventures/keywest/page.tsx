@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -54,7 +55,7 @@ export default function KeyWestPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/MelonDiningCarSmall.jpg"
                 alt="Melon in the AutoTrain Dining Car"
                 fill
@@ -66,7 +67,7 @@ export default function KeyWestPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/Pigeon Key.jpg"
                 alt="Melon on the old railroad bridge to Pigeon Key"
                 fill
@@ -78,7 +79,7 @@ export default function KeyWestPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/MGAsOnthebridge.jpg"
                 alt="The Caravan to Pigeon Key"
                 fill
@@ -90,7 +91,7 @@ export default function KeyWestPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/Waiting for the Parade to begin.jpg"
                 alt="Waiting for the parade to begin"
                 fill

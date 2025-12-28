@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -42,7 +43,7 @@ export default function OttawaPage() {
         <div className="space-y-8">
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/MelonErieCanal.jpg"
                 alt="Melon at Erie Canal"
                 fill
@@ -60,7 +61,7 @@ export default function OttawaPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MapSacketsHarbor.jpg"
                 alt="Map showing route to Sacket's Harbor"
                 fill
@@ -77,7 +78,7 @@ export default function OttawaPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/ClubSackets.jpg"
                 alt="Club members at Sacket's Harbor"
                 fill
@@ -94,7 +95,7 @@ export default function OttawaPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MGAsFerry2.jpg"
                 alt="MGAs packed on the ferry to Canada"
                 fill
@@ -111,7 +112,7 @@ export default function OttawaPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/K&MatCarShow.jpg"
                 alt="Ken and Melon at the car show"
                 fill
@@ -127,7 +128,7 @@ export default function OttawaPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/DriveIn.jpg"
                 alt="Drive-in movie showing Blue Hawaii"
                 fill

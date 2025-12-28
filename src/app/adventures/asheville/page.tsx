@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -37,7 +38,7 @@ export default function AshevillePage() {
         <div className="space-y-8">
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/Ranchero.jpg"
                 alt="Vintage Ranchero at the motel"
                 fill
@@ -63,7 +64,7 @@ export default function AshevillePage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/LargeBeer.jpg"
                 alt="Large beer in Galax, VA"
                 fill
@@ -86,7 +87,7 @@ export default function AshevillePage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/FishStone.jpg"
                 alt="Fish-shaped rock formation"
                 fill
@@ -110,7 +111,7 @@ export default function AshevillePage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Melon&AlanaBiltmore.jpg"
                 alt="Melon and Alana at Biltmore Estate"
                 fill
@@ -127,7 +128,7 @@ export default function AshevillePage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MGAsBiltmore.jpg"
                 alt="MGAs at Biltmore Estate"
                 fill

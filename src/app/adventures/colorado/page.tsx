@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -34,7 +35,7 @@ export default function ColoradoPage() {
         </ContentCard>
 
         <div className="relative w-full aspect-video mb-8">
-          <Image
+          <ClickableImage
             src="/images/GT-47 Poster.jpeg"
             alt="GT-47 Poster"
             fill
@@ -51,7 +52,7 @@ export default function ColoradoPage() {
               Boulder to visit our daughter after the event.
             </p>
             <div className="relative w-full aspect-[2/1] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/TotalTripGT-47.jpeg"
                 alt="Trip route map"
                 fill
@@ -66,7 +67,7 @@ export default function ColoradoPage() {
               The sign on the luggage says it all...
             </p>
             <div className="relative w-full aspect-square max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Passenger side rear profile.png"
                 alt="Colorado or Bust - ready for the trip"
                 fill
@@ -81,7 +82,7 @@ export default function ColoradoPage() {
               celebrating Old Glory!
             </p>
             <div className="relative w-full aspect-square max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Flags.jpeg"
                 alt="Memorial Day flags"
                 fill
@@ -98,7 +99,7 @@ export default function ColoradoPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div className="relative aspect-[2/1]">
-                <Image
+                <ClickableImage
                   src="/images/3States.jpeg"
                   alt="Three states intersection sign"
                   fill
@@ -106,7 +107,7 @@ export default function ColoradoPage() {
                 />
               </div>
               <div className="relative aspect-[4/3]">
-                <Image
+                <ClickableImage
                   src="/images/Cairo_IL_Mississippi_R_Bridge_P6190061.jpg"
                   alt="Cairo Mississippi River Bridge"
                   fill
@@ -133,7 +134,7 @@ export default function ColoradoPage() {
               One night we ran into an old friend from back in the days Ken worked at Top Gun school...
             </p>
             <div className="relative w-full aspect-[3/4] max-w-md mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/TomCruise.jpeg"
                 alt="Running into Tom Cruise"
                 fill
@@ -147,7 +148,7 @@ export default function ColoradoPage() {
               One week after leaving Beaufort, SC, we reached Colorado.
             </p>
             <div className="relative w-full aspect-[4/3] max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/HelloColorado.jpeg"
                 alt="Welcome to Colorado"
                 fill
@@ -164,7 +165,7 @@ export default function ColoradoPage() {
               line millions of years ago.
             </p>
             <div className="relative w-full aspect-[3/4] max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/GardenGods.jpeg"
                 alt="Garden of the Gods"
                 fill
@@ -181,7 +182,7 @@ export default function ColoradoPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div className="relative aspect-[3/4]">
-                <Image
+                <ClickableImage
                   src="/images/GlenEyrie.jpeg"
                   alt="Glen Eyrie Castle"
                   fill
@@ -189,7 +190,7 @@ export default function ColoradoPage() {
                 />
               </div>
               <div className="relative aspect-[3/4]">
-                <Image
+                <ClickableImage
                   src="/images/HighTea.jpeg"
                   alt="High Tea at Glen Eyrie"
                   fill
@@ -206,7 +207,7 @@ export default function ColoradoPage() {
               known as one of the most exclusive high-end resorts in the US.
             </p>
             <div className="relative w-full aspect-[4/3] max-w-xl mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Broadmoor.jpeg"
                 alt="The Broadmoor"
                 fill
@@ -222,7 +223,7 @@ export default function ColoradoPage() {
               England and reassembled in Colorado Springs!
             </p>
             <div className="relative w-full aspect-[3/4] max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/GoldenBeeBar.jpeg"
                 alt="The Golden Bee Pub"
                 fill
@@ -271,7 +272,7 @@ export default function ColoradoPage() {
               After the GT we travelled up to Boulder to visit our daughter and son-in-law.
             </p>
             <div className="relative w-full aspect-[3/4] max-w-lg mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/Melon&KarenFarmerMkt.jpeg"
                 alt="Melon and Karen at Boulder Farmer's Market"
                 fill
@@ -287,7 +288,7 @@ export default function ColoradoPage() {
               just over 4,100 miles for the round trip.
             </p>
             <div className="relative w-full aspect-[4/3] max-w-xl mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/LastDay.jpeg"
                 alt="Last day of the trip"
                 fill

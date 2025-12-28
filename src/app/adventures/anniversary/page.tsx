@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -43,7 +44,7 @@ export default function AnniversaryPage() {
 
         <div className="space-y-8">
           <div className="relative aspect-[4/3]">
-            <Image
+            <ClickableImage
               src="/images/Morgan.jpg"
               alt="The Morgan rental car"
               fill
@@ -58,7 +59,7 @@ export default function AnniversaryPage() {
               years ago, but the Kimber House office building remains.
             </p>
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/KimberHouse.jpg"
                 alt="Kimber House"
                 fill
@@ -76,7 +77,7 @@ export default function AnniversaryPage() {
               Scottish Highlands and Lochs.
             </p>
             <div className="relative aspect-video">
-              <Image
+              <ClickableImage
                 src="/images/MGADay.jpg"
                 alt="Scottish MGA Day"
                 fill
@@ -102,7 +103,7 @@ export default function AnniversaryPage() {
               Lake District.
             </p>
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/MorganLakeDistrict.jpg"
                 alt="Morgan in the Lake District"
                 fill
@@ -114,7 +115,7 @@ export default function AnniversaryPage() {
               are of the finest British Craftsmanship&quot;
             </p>
             <div className="relative aspect-[3/4] max-w-md mx-auto mt-4">
-              <Image
+              <ClickableImage
                 src="/images/MOGBumper.jpg"
                 alt="Morgan bumper falling off"
                 fill
@@ -132,7 +133,7 @@ export default function AnniversaryPage() {
               to end our contract they came up with this...
             </p>
             <div className="relative aspect-square max-w-lg mx-auto">
-              <Image
+              <ClickableImage
                 src="/images/E-Jag.jpg"
                 alt="E-Type Jaguar"
                 fill
@@ -148,7 +149,7 @@ export default function AnniversaryPage() {
               Melon was in heaven!
             </p>
             <div className="relative aspect-[4/3] mb-4">
-              <Image
+              <ClickableImage
                 src="/images/Melon&Lads.jpg"
                 alt="Melon with the Beatles statues"
                 fill
@@ -156,7 +157,7 @@ export default function AnniversaryPage() {
               />
             </div>
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/Cavern.jpg"
                 alt="The Cavern Club"
                 fill
@@ -193,7 +194,7 @@ export default function AnniversaryPage() {
               then traveled the full width of Ireland to the west coast and the famous Cliffs of Moher.
             </p>
             <div className="relative aspect-[3/4] max-w-md mx-auto">
-              <Image
+              <ClickableImage
                 src="/images/CliffsOfMoher.jpg"
                 alt="Cliffs of Moher"
                 fill
@@ -208,7 +209,7 @@ export default function AnniversaryPage() {
               Kinsale before flying home from Dublin.
             </p>
             <div className="relative aspect-video">
-              <Image
+              <ClickableImage
                 src="/images/Dingle.jpg"
                 alt="Dingle Peninsula"
                 fill

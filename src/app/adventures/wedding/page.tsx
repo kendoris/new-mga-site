@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -56,7 +57,7 @@ export default function WeddingPage() {
           <div className="text-center">
             <p className="font-bold mb-4">Here&apos;s a picture from the cover of the June 2015 issue:</p>
             <div className="relative aspect-[3/4] max-w-md mx-auto">
-              <Image
+              <ClickableImage
                 src="/images/WeddingCoverMGA.jpg"
                 alt="MGA Magazine Wedding Cover"
                 fill
@@ -71,7 +72,7 @@ export default function WeddingPage() {
             </p>
             <div className="space-y-6">
               <div className="relative aspect-[3/2]">
-                <Image
+                <ClickableImage
                   src="/images/314.jpg"
                   alt="Karen makes her entrance"
                   fill
@@ -79,7 +80,7 @@ export default function WeddingPage() {
                 />
               </div>
               <div className="relative aspect-[5/4]">
-                <Image
+                <ClickableImage
                   src="/images/320.jpg"
                   alt="Wedding photo"
                   fill
@@ -87,7 +88,7 @@ export default function WeddingPage() {
                 />
               </div>
               <div className="relative aspect-[5/4]">
-                <Image
+                <ClickableImage
                   src="/images/524.jpg"
                   alt="Wedding photo"
                   fill
@@ -95,7 +96,7 @@ export default function WeddingPage() {
                 />
               </div>
               <div className="relative aspect-[16/9]">
-                <Image
+                <ClickableImage
                   src="/images/525.jpg"
                   alt="Wedding photo"
                   fill
@@ -103,7 +104,7 @@ export default function WeddingPage() {
                 />
               </div>
               <div className="relative aspect-[3/2]">
-                <Image
+                <ClickableImage
                   src="/images/KarenPeteDriveAway.jpg"
                   alt="Karen and Pete drive away"
                   fill

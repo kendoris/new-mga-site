@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import ContentCard from '@/components/ContentCard';
 
 const restorationImages = [
@@ -75,7 +76,7 @@ export default function RestorationPage() {
               >
                 <p className="text-sm font-bold text-center mb-2">{image.caption}</p>
                 <div className="relative aspect-[4/3]">
-                  <Image
+                  <ClickableImage
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -97,7 +98,7 @@ export default function RestorationPage() {
             the dedication of those who worked to preserve it.
           </p>
           <div className="relative w-full aspect-[4/3] mt-6">
-            <Image
+            <ClickableImage
               src="/images/frontwithbumper.jpg"
               alt="Restored MGA front view"
               fill

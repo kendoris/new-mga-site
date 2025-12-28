@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -52,7 +53,7 @@ export default function RoadsideRepairsPage() {
 
         <div className="space-y-8">
           <div className="relative aspect-[4/3] w-full">
-            <Image
+            <ClickableImage
               src="/images/troopergiveswarning.jpg"
               alt="State Trooper giving warning about bomb threat"
               fill
@@ -70,7 +71,7 @@ export default function RoadsideRepairsPage() {
                 </p>
               </div>
               <div className="relative w-full md:w-80 aspect-[3/4]">
-                <Image
+                <ClickableImage
                   src="/images/fuelpump.jpg"
                   alt="Fuel pump with copper paper clip washer"
                   fill

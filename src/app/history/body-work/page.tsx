@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -39,7 +40,7 @@ export default function BodyWorkPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/wheel_well.jpg"
                 alt="Wheel well restoration"
                 fill
@@ -51,7 +52,7 @@ export default function BodyWorkPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/left_front.jpg"
                 alt="Installing the fender liners"
                 fill
@@ -63,7 +64,7 @@ export default function BodyWorkPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/frontwithbumper.jpg"
                 alt="Front with bumper installed"
                 fill
@@ -75,7 +76,7 @@ export default function BodyWorkPage() {
 
           <div className="space-y-2">
             <div className="relative aspect-[4/3]">
-              <Image
+              <ClickableImage
                 src="/images/back_with_bumper.jpg"
                 alt="Back with bumper and electricals"
                 fill

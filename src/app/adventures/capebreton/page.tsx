@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ClickableImage from '@/components/ClickableImage';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
@@ -38,7 +39,7 @@ export default function CapeBretonPage() {
           <div className="space-y-2">
             <p className="text-center font-bold">Here&apos;s the &quot;Chamber of Commerce&quot; photo of the Cabot Trail:</p>
             <div className="relative aspect-[4/3] max-w-2xl mx-auto">
-              <Image
+              <ClickableImage
                 src="/images/CabotTrailfromAir.jpg"
                 alt="Cabot Trail from the Air"
                 fill
@@ -52,7 +53,7 @@ export default function CapeBretonPage() {
               And here is the trail from the &apos;A&apos;, taken right after rounding that big curve on the left:
             </p>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/IMG_2252.JPG"
                 alt="View of the trail from the MGA"
                 fill
@@ -72,7 +73,7 @@ export default function CapeBretonPage() {
               after I snapped this photo (the fellow coming out the door has an uncle, who had a friend with...)
             </p>
             <div className="relative aspect-[4/3] mt-4">
-              <Image
+              <ClickableImage
                 src="/images/IMG_2181.JPG"
                 alt="General Store on Cabot Trail"
                 fill
@@ -88,7 +89,7 @@ export default function CapeBretonPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative aspect-[4/3]">
-                <Image
+                <ClickableImage
                   src="/images/IMG_2226.JPG"
                   alt="Melon and MGA on Cabot Trail"
                   fill
@@ -96,7 +97,7 @@ export default function CapeBretonPage() {
                 />
               </div>
               <div className="relative aspect-[4/3]">
-                <Image
+                <ClickableImage
                   src="/images/IMG_2065.JPG"
                   alt="Overlooking Fundy Trail"
                   fill
