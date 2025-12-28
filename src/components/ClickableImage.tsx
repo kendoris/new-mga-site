@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { useLightbox } from './PageLightbox';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 interface ClickableImageProps {
   src: string;
@@ -19,29 +20,23 @@ export default function ClickableImage({
   fill = true,
   priority = false
 }: ClickableImageProps) {
-  const { registerImage, openLightbox } = useLightbox();
-  const [imageIndex, setImageIndex] = useState(-1);
-
-  useEffect(() => {
-    // Register this image and get its index
-    const index = registerImage(src, alt);
-    setImageIndex(index);
-  }, [src, alt, registerImage]);
-
-  const handleClick = () => {
-    if (imageIndex >= 0) {
-      openLightbox(imageIndex);
-    }
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Image
-      src={src}
-      alt={alt}
-      fill={fill}
-      priority={priority}
-      className={`${className} cursor-pointer`}
-      onClick={handleClick}
-    />
+    <>
+      <Image
+        src={src}
+        alt={alt}
+        fill={fill}
+        priority={priority}
+        className={`${className} cursor-pointer`}
+        onClick={() => setIsOpen(true)}
+      />
+      <Lightbox
+        open={isOpen}
+        close={() => setIsOpen(false)}
+        slides={[{ src, alt }]}
+      />
+    </>
   );
 }

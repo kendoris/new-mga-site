@@ -3,13 +3,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ClickableImage from '@/components/ClickableImage';
-import { PageLightboxProvider } from '@/components/PageLightbox';
 import Link from 'next/link';
 import ContentCard from '@/components/ContentCard';
 
 export default function FirstStepsPage() {
   return (
-    <PageLightboxProvider>
+    
     <div className="max-w-4xl mx-auto px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -54,6 +53,6 @@ export default function FirstStepsPage() {
         <p className="text-center text-sm mt-2 italic">Ken & Kyle in MGA for first ride</p>
       </motion.div>
     </div>
-    </PageLightboxProvider>
+    
   );
 }
