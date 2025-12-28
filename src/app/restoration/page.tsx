@@ -9,6 +9,9 @@ const restorationImages = [
   { src: '/images/Welding Drivers lower doorsil.jpg', alt: 'Welding Drivers Door Sill', caption: 'August 2004 - RJ welds Drivers Door Sill' },
   { src: '/images/body_off.jpg', alt: 'Body off and primed', caption: 'July 2004 - Body off and primed' },
   { src: '/images/dcp_0027.jpg', alt: 'Frame sandblasted', caption: 'July 2004 - Frame sandblasted and ready for primer' },
+  { src: '/images/wheel_well.jpg', alt: 'Wheel well restoration', caption: 'December 2004 - Wheel well' },
+  { src: '/images/left_front.jpg', alt: 'Installing fender liners', caption: 'December 2004 - Installing fender liners' },
+  { src: '/images/back_with_bumper.jpg', alt: 'Rear with bumper', caption: 'December 2004 - Electricals sorted out' },
 ];
 
 export default function RestorationPage() {
