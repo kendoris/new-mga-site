@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
+import ClickableImage, { PageLightboxManager } from '@/components/ClickableImage';
 import ContentCard from '@/components/ContentCard';
 import Timeline from '@/components/Timeline';
 
@@ -60,7 +60,9 @@ const quickLinks = [
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <>
+      <PageLightboxManager />
+      <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -89,7 +91,7 @@ export default function Home() {
           </div>
 
           <div className="relative w-full max-w-xl mx-auto aspect-[4/3] mb-6">
-            <Image
+            <ClickableImage
               src="/images/MelonMGA-Day1.jpg"
               alt="Melon's new MGA 1968"
               fill
@@ -102,7 +104,7 @@ export default function Home() {
           </div>
 
           <div className="relative w-full max-w-xl mx-auto aspect-[4/3]">
-            <Image
+            <ClickableImage
               src="/images/mgabefore.jpg"
               alt="MGA Before Restoration"
               fill
@@ -148,6 +150,7 @@ export default function Home() {
         </h2>
         <Timeline events={timelineEvents} />
       </motion.div>
-    </div>
+      </div>
+    </>
   );
 }
