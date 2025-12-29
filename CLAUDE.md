@@ -21,7 +21,7 @@ A modern Next.js website for Ken and Melon's 1962 MGA 1600 MKII, migrated from t
 
 ```
 src/app/
-├── page.tsx                    # Home page (with clickable timeline)
+├── page.tsx                    # Home page (with clickable timeline + lightbox images)
 ├── history/
 │   ├── page.tsx               # History landing page
 │   ├── christmas-1969/        # Christmas 1969 story
@@ -136,7 +136,10 @@ npm run build  # Production build
 - Added pinch-to-zoom on mobile for lightbox images (Zoom plugin)
 - Added Vercel Analytics for visitor tracking
 - Made home page timeline items clickable
+- Made home page images clickable with lightbox
 - Added videos section to Gallery page
 - Added PDF article links to Savannah, Wedding, and Anniversary pages
 - Created 5 history sub-pages (Christmas 1969, Roadside Repairs, Body Work, First Steps, First Award)
 - Created NEW_CONTENT_TEMPLATE.txt for user to prepare new page content
+- Removed erroneous Daufuskie Island section from Savannah page
+- Trimmed black borders from vintage photos (originals preserved as *_original.jpg)
