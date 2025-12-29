@@ -132,23 +132,6 @@ export default function SavannahPage() {
             </div>
           </ContentCard>
 
-          <ContentCard>
-            <div className="prose max-w-none text-lg leading-relaxed space-y-4">
-              <p>
-                On one of the organized drives, we took the ferry to Daufuskie Island and
-                enjoyed exploring with our fellow MGA enthusiasts.
-              </p>
-            </div>
-            <div className="relative aspect-[4/3] mt-4">
-              <ClickableImage
-                src="/images/MGAsFerry.jpg"
-                alt="MGAs on the Ferry"
-                fill
-                className="object-contain rounded-lg shadow-lg"
-              />
-            </div>
-          </ContentCard>
-
           <ContentCard className="text-center">
             <p className="text-lg italic mb-4">
               To quote Bill Marshall, &quot;It was a great time... as NAMGAR Regionals always are!&quot;
