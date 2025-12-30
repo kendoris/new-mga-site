@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+
+const GA_MEASUREMENT_ID = "G-LF85L7XZYB";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -28,6 +31,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </head>
       <body
         className={`${playfair.variable} ${lora.variable} antialiased flex flex-col min-h-screen`}
       >
