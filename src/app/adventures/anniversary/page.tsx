@@ -147,6 +147,34 @@ export default function AnniversaryPage() {
 
           <ContentCard>
             <p className="text-lg mb-4">
+              Driving the E-Type was a thrill, until it rained (hey, it&apos;s England).
+              That&apos;s when the driver&apos;s side wiper arm decided to depart!
+            </p>
+            <div className="relative aspect-[4/3]">
+              <ClickableImage
+                src="/images/WiperDeparts.jpg"
+                alt="Wiper arm departing"
+                fill
+                className="object-contain rounded-lg shadow-lg"
+              />
+            </div>
+            <p className="text-lg mt-4 mb-4">
+              We hammered the wiper back on but it came off again. After chatting with the
+              agency&apos;s mechanic, he agreed to have us super glue it on. Our toolkit now
+              looked like this:
+            </p>
+            <div className="relative aspect-[3/4] max-w-md mx-auto">
+              <ClickableImage
+                src="/images/Toolkit.jpg"
+                alt="Our toolkit including super glue"
+                fill
+                className="object-contain rounded-lg shadow-lg"
+              />
+            </div>
+          </ContentCard>
+
+          <ContentCard>
+            <p className="text-lg mb-4">
               Despite the problems, the E-Jag got us to Liverpool - the place the Beatles became famous.
               Melon was in heaven!
             </p>
@@ -158,6 +186,9 @@ export default function AnniversaryPage() {
                 className="object-contain rounded-lg shadow-lg"
               />
             </div>
+            <p className="text-lg mt-4 mb-4">
+              The Cavern Club was empty at 9 AM when we visited, and we took full advantage of it!
+            </p>
             <div className="relative aspect-[4/3]">
               <ClickableImage
                 src="/images/Cavern.jpg"
@@ -192,7 +223,21 @@ export default function AnniversaryPage() {
 
           <ContentCard>
             <p className="text-lg mb-4">
-              After two days in Dublin, we rented a 2019 Audi in Dublin (stick shift of course),
+              The day we were to drive onto the ferry to Ireland from Holyhead, the Jag&apos;s battery
+              died - permanently. With no replacement available for over a week (!), we left it at
+              the dock and boarded the ferry to Dublin. Among other sights, we visited Trinity College
+              to see the famous{' '}
+              <a
+                href="https://www.worldhistory.org/Book_of_Kells/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--nav-bg)] underline hover:opacity-80"
+              >
+                Book of Kells
+              </a>.
+            </p>
+            <p className="text-lg mb-4">
+              After two days in Dublin, we rented a 2019 Audi (stick shift of course),
               then traveled the full width of Ireland to the west coast and the famous Cliffs of Moher.
             </p>
             <div className="relative aspect-[3/4] max-w-md mx-auto">
@@ -227,7 +272,11 @@ export default function AnniversaryPage() {
             <p className="text-lg mt-4">
               Made many new friends - fellow travelers as well as innkeepers.
             </p>
-            <p className="text-lg mt-2">
+            <p className="text-lg mt-2">Many castles and gardens.</p>
+            <p className="text-lg mt-2">Favorite dishes - Local Oysters and &quot;Traditional&quot; Irish Cottage Pies.</p>
+            <p className="text-lg mt-2">Least favorite feature - Roundabouts every mile or so in England!</p>
+            <p className="text-lg mt-2">New skills - driving on left and shifting with left hand.</p>
+            <p className="text-lg mt-4 font-bold">
               Great Trip - flew home with broad smiles and wonderful memories!
             </p>
             <p className="text-lg mt-4">
@@ -244,6 +293,17 @@ export default function AnniversaryPage() {
               {' '}and{' '}
               <a
                 href="/FiveCars2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--nav-bg)] underline hover:opacity-80"
+              >
+                here
+              </a>
+            </p>
+            <p className="text-lg mt-4">
+              You can also read the article Colyn Firth submitted to <em>MGA!</em> magazine{' '}
+              <a
+                href="/HostingTheYanks.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--nav-bg)] underline hover:opacity-80"
