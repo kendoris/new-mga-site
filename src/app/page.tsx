@@ -44,6 +44,36 @@ const timelineEvents = [
     href: '/adventures/capebreton',
   },
   {
+    year: '2013',
+    title: 'Savannah Regional',
+    description: 'Over 2,500 miles down the east coast, through the Outer Banks and two ferries to the NAMGAR Regional.',
+    href: '/adventures/savannah',
+  },
+  {
+    year: '2013',
+    title: 'Asheville GT-38',
+    description: 'A rainy drive through NJ, PA, and MD to NAMGAR\'s GT-38 in the Blue Ridge Mountains.',
+    href: '/adventures/asheville',
+  },
+  {
+    year: '2014',
+    title: 'Ottawa GT-39',
+    description: '"A Capital Idea" - driving to Canada\'s capital via the Erie/Mohawk canal and Sacket\'s Harbor.',
+    href: '/adventures/ottawa',
+  },
+  {
+    year: '2014',
+    title: 'Karen\'s Wedding',
+    description: 'Our daughter arrived at her New Hampshire orchard wedding in the MGA she once "drove" as a child.',
+    href: '/adventures/wedding',
+  },
+  {
+    year: '2019',
+    title: '50th Anniversary',
+    description: 'Celebrating our golden anniversary driving a Morgan through the UK and Ireland.',
+    href: '/adventures/anniversary',
+  },
+  {
     year: '2022',
     title: 'Colorado GT-47',
     description: '4,100 mile round trip to Colorado Springs, climbing as high as 8,800 feet!',
