@@ -107,6 +107,17 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
   { src: '/images/GoldenBeeBar.jpeg', alt: 'Golden Bee Bar', caption: 'Colorado 2022 - Golden Bee', category: 'trips' },
   { src: '/images/Melon&KarenFarmerMkt.jpeg', alt: 'Melon and Karen at Farmer Market', caption: 'Colorado 2022 - Farmer Market', category: 'trips' },
   { src: '/images/LastDay.jpeg', alt: 'Last day', caption: 'Colorado 2022 - Final day', category: 'trips' },
+
+  // Trips - Manatees / GOF South 2024
+  { src: '/images/Ken Sunset Grystal River Resort.jpeg', alt: 'Ken at Crystal River sunset', caption: 'Manatees 2024 - Crystal River Resort', category: 'trips' },
+  { src: '/images/IMG_3259.jpeg', alt: 'Melon swimming with manatees', caption: 'Manatees 2024 - Swimming with manatees', category: 'trips' },
+  { src: '/images/IMG_3237.jpeg', alt: 'Melon with MGA by the water', caption: 'Manatees 2024 - Florida coastline', category: 'trips' },
+  { src: '/images/IMG_3255.jpeg', alt: 'Melon at Peck\'s Old Port Cove', caption: 'Manatees 2024 - Peck\'s Old Port Cove', category: 'trips' },
+  { src: '/images/Melon with tray of oysters.jpeg', alt: 'Fresh Gulf oysters', caption: 'Manatees 2024 - Gulf oysters', category: 'trips' },
+  { src: '/images/IMG_3292.jpeg', alt: 'Panhandle beach panorama', caption: 'Manatees 2024 - Florida Panhandle', category: 'trips' },
+  { src: '/images/IMG_3301.jpeg', alt: 'Ken on the beach', caption: 'Manatees 2024 - Panhandle beach', category: 'trips' },
+  { src: '/images/IMG_3299.jpeg', alt: 'Melon on the beach', caption: 'Manatees 2024 - Crystal clear water', category: 'trips' },
+  { src: '/images/IMG_3289.jpeg', alt: 'MGA in Rosemary Beach', caption: 'Manatees 2024 - Rosemary Beach', category: 'trips' },
 ];
 
 const galleryVideos = [
@@ -116,6 +127,7 @@ const galleryVideos = [
   { src: '/images/Bridge.mp4', title: 'Mississippi River Crossing', caption: 'Colorado GT-47 - Historic Cairo Bridge' },
   { src: '/images/RoyalGorgeBridgeOverview.mp4', title: 'Royal Gorge Bridge', caption: 'Colorado GT-47 - 955 feet above the Arkansas River' },
   { src: '/images/MelonBridge.mp4', title: 'Melon Crosses the Bridge', caption: 'Colorado GT-47 - Braving the Royal Gorge' },
+  { src: '/images/IMG_3287.mov', title: 'After Swimming with Manatees', caption: 'Manatees 2024 - Melon back on the boat' },
 ];
 
 export default function GalleryPage() {
