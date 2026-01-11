@@ -42,7 +42,8 @@ src/app/
 │   ├── ottawa/                # Ottawa GT-39 2014
 │   ├── wedding/               # Karen's Wedding 2014
 │   ├── anniversary/           # 50th Anniversary UK/Ireland 2019
-│   └── colorado/              # Colorado GT-47 2022
+│   ├── colorado/              # Colorado GT-47 2022
+│   └── manatees/              # Swimming with Manatees / GOF South 2024
 └── gallery/
     └── page.tsx               # Photo gallery + Videos section
 ```
@@ -82,6 +83,7 @@ src/app/
 - **Videos**: `/public/images/`
   - Colorado: `Bridge.mp4`, `RoyalGorgeBridgeOverview.mp4`, `MelonBridge.mp4`
   - Anniversary: `HighRoad.mp4`, `CavernClub.mp4`, `Mersey.mp4`
+  - Manatees: `IMG_3287.mov` (Melon after swimming with manatees)
 
 ## Deployment
 
@@ -143,3 +145,10 @@ npm run build  # Production build
 - Created NEW_CONTENT_TEMPLATE.txt for user to prepare new page content
 - Removed erroneous Daufuskie Island section from Savannah page
 - Trimmed black borders from vintage photos (originals preserved as *_original.jpg)
+
+## Recent Changes (Jan 2025)
+
+- Added missing adventures to home page timeline (Savannah 2013, Asheville 2013, Ottawa 2014, Wedding 2014, Anniversary 2019)
+- Added new "Swimming with the Manatees" adventure page (GOF South 2024, Florida Panhandle)
+  - Crystal River Resort, manatee swimming, Peck's Old Port Cove seafood, Panhandle beaches, Rosemary Beach
+  - Source content folder: `/Users/kend/Documents/New MGA Adventures/`
