@@ -62,6 +62,13 @@ const adventures = [
     description: '4,100 mile round trip to Colorado Springs, climbing as high as 8,800 feet through Georgia, Alabama, Tennessee, Kentucky, Missouri, and Kansas!',
     image: '/images/HelloColorado.jpeg',
   },
+  {
+    title: 'Swimming with the Manatees',
+    year: '2024',
+    slug: 'manatees',
+    description: 'GOF South in Crystal River and exploring the Florida Panhandle - manatees, seafood, and stunning beaches!',
+    image: '/images/IMG_3237.jpeg',
+  },
 ];
 
 export default function AdventuresPage() {

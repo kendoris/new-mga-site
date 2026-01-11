@@ -79,6 +79,12 @@ const timelineEvents = [
     description: '4,100 mile round trip to Colorado Springs, climbing as high as 8,800 feet!',
     href: '/adventures/colorado',
   },
+  {
+    year: '2024',
+    title: 'Swimming with the Manatees',
+    description: 'An anniversary trip to Crystal River and the Florida Panhandle - with a surprise manatee encounter!',
+    href: '/adventures/manatees',
+  },
 ];
 
 const quickLinks = [
