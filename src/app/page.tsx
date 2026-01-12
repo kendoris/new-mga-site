@@ -82,7 +82,7 @@ const timelineEvents = [
   {
     year: '2024',
     title: 'Swimming with the Manatees',
-    description: 'An anniversary trip to Crystal River and the Florida Panhandle - with a surprise manatee encounter!',
+    description: 'An anniversary trip to Crystal River and the Florida Panhandle - swimming with manatees!',
     href: '/adventures/manatees',
   },
 ];
