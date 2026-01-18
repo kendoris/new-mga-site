@@ -64,6 +64,19 @@ export default function WSJArticlePage() {
             </div>
           </ContentCard>
 
+          {/* Day 1 - 1968 */}
+          <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto mb-2">
+            <ClickableImage
+              src="/images/MelonMGA-Day1.jpg"
+              alt="Melon with her new MGA in 1968"
+              fill
+              className="object-contain rounded-lg shadow-lg border-4 border-white"
+            />
+          </div>
+          <p className="text-center text-sm text-[var(--foreground)] opacity-60 mb-8">
+            Melon with her new MGA - Day 1, 1968
+          </p>
+
           {/* Car exterior shot */}
           <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto mb-2">
             <ClickableImage
