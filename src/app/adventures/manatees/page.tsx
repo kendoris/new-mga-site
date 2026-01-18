@@ -227,7 +227,8 @@ export default function ManateesPage() {
               The trip was full of great food, beautiful scenery, and unexpected adventures.
               Even though we missed the GOF South due to COVID concerns, we made the most
               of our anniversary trip - swimming with manatees, exploring the Panhandle,
-              and enjoying fresh Gulf seafood along the way.
+              and enjoying fresh Gulf seafood along the way. The total trip was over 1500
+              miles and the MGA ran without a hiccup.
             </p>
             <p className="text-lg mt-4 font-bold">
               Sometimes the detours turn out to be the best part of the journey!
