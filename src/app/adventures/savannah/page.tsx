@@ -139,7 +139,7 @@ export default function SavannahPage() {
             <p className="text-lg">
               You can read more about it in an article Melon wrote for{' '}
               <a
-                href="/Savannah article.pdf"
+                href="/SavannahArticle.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--nav-bg)] underline hover:opacity-80"
