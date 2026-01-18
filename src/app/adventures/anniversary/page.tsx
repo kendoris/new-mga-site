@@ -54,6 +54,18 @@ export default function AnniversaryPage() {
             />
           </div>
 
+          <div className="relative aspect-[4/3]">
+            <ClickableImage
+              src="/images/morgan-plus8-bw.jpg"
+              alt="2001 Morgan Plus 8"
+              fill
+              className="object-contain rounded-lg shadow-lg"
+            />
+          </div>
+          <p className="text-center text-sm text-[var(--foreground)] opacity-60 -mt-6 mb-4">
+            Our 2001 Morgan Plus 8
+          </p>
+
           <ContentCard>
             <p className="text-lg mb-4">
               We arrived in London in late July and picked up the Morgan at Heathrow, then took off
