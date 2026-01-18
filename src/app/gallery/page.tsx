@@ -130,6 +130,7 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
   { src: '/images/wsj/wsj-steering-wheel.jpg', alt: 'Steering wheel and instrument panel', caption: 'WSJ 2022 - Driver\'s view', category: 'press' },
   { src: '/images/wsj/wsj-dashboard.jpg', alt: 'Dashboard with MG badge', caption: 'WSJ 2022 - "Wherever it goes, it draws a crowd"', category: 'press' },
   { src: '/images/wsj/wsj-toy-mga.jpg', alt: 'Ken and Melon with toy MGA model', caption: 'WSJ 2022 - Model and the real thing', category: 'press' },
+  { src: '/images/wsj/wsj-behind-scenes.jpg', alt: 'Melon during WSJ photoshoot', caption: 'WSJ 2022 - Behind the scenes', category: 'press' },
 ];
 
 const galleryVideos = [

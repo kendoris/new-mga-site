@@ -195,6 +195,19 @@ export default function WSJArticlePage() {
             Ken and Melon with a toy version of the MGA, and the real thing behind.
           </p>
 
+          {/* Behind the scenes */}
+          <div className="relative aspect-[3/4] w-full max-w-md mx-auto mb-2">
+            <ClickableImage
+              src="/images/wsj/wsj-behind-scenes.jpg"
+              alt="Melon during the WSJ photoshoot with photographer Daniel Roa working in the background"
+              fill
+              className="object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <p className="text-center text-sm text-[var(--foreground)] opacity-60 mb-8">
+            Behind the scenes: Melon during the photoshoot
+          </p>
+
           <ContentCard className="mb-8 bg-amber-50 border border-amber-200">
             <div className="text-center">
               <p className="text-sm text-gray-700 mb-2">
