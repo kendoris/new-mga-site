@@ -78,6 +78,7 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
   { src: '/images/KarenPeteDriveAway.jpg', alt: 'Wedding drive away', caption: 'Driving off into the sunset', category: 'trips' },
 
   // Trips - 50th Anniversary
+  { src: '/images/morgan-plus8-bw.jpg', alt: 'Morgan Plus 8 black and white', caption: '50th Anniversary Trip - Morgan Plus 8', category: 'trips' },
   { src: '/images/Morgan.jpg', alt: 'Morgan car', caption: '50th Anniversary Trip - Morgan', category: 'trips' },
   { src: '/images/KimberHouse.jpg', alt: 'Kimber House', caption: '50th Anniversary - Kimber House', category: 'trips' },
   { src: '/images/MGADay.jpg', alt: 'MGA Day', caption: '50th Anniversary - MGA Day', category: 'trips' },
