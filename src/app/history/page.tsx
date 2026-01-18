@@ -41,6 +41,13 @@ const historyPages = [
     image: '/images/IMG_0153.JPG',
     href: '/history/first-award',
   },
+  {
+    title: 'Wall Street Journal Feature',
+    subtitle: 'October 2022',
+    description: '"Her Classic Roadster Languished for Decades. Now She Hits the Road in Style." Our MGA story featured in the WSJ "My Ride" column.',
+    image: '/images/wsj/wsj-hero.jpg',
+    href: '/history/wsj-article',
+  },
 ];
 
 export default function HistoryPage() {

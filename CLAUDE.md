@@ -28,7 +28,8 @@ src/app/
 │   ├── roadside-repairs/      # 1970 roadside repair story
 │   ├── first-steps/           # First drive in 30 years (2004)
 │   ├── body-work/             # Body restoration photos
-│   └── first-award/           # Southampton rally 2005
+│   ├── first-award/           # Southampton rally 2005
+│   └── wsj-article/           # Wall Street Journal "My Ride" feature (Oct 2022)
 ├── restoration/
 │   └── page.tsx               # Restoration details
 ├── how-to/
@@ -152,3 +153,9 @@ npm run build  # Production build
 - Added new "Swimming with the Manatees" adventure page (GOF South 2024, Florida Panhandle)
   - Crystal River Resort, manatee swimming, Peck's Old Port Cove seafood, Panhandle beaches, Rosemary Beach
   - Source content folder: `/Users/kend/Documents/New MGA Adventures/`
+- Added Wall Street Journal "My Ride" feature article page (October 2022)
+  - New history page at `/history/wsj-article/`
+  - Added to home page timeline
+  - Added "Press & Media" category to gallery
+  - Images needed in `/public/images/wsj/` (see below for filenames)
+  - Source PDF: `/Users/kend/Documents/New MGA Adventures/WSJ Article - Melon Doris and her husband.pdf`

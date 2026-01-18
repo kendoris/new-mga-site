@@ -80,6 +80,12 @@ const timelineEvents = [
     href: '/adventures/colorado',
   },
   {
+    year: '2022',
+    title: 'Wall Street Journal Feature',
+    description: '"Her Classic Roadster Languished for Decades. Now She Hits the Road in Style." - Featured in the WSJ "My Ride" column.',
+    href: '/history/wsj-article',
+  },
+  {
     year: '2024',
     title: 'Swimming with the Manatees',
     description: 'An anniversary trip to Crystal River and the Florida Panhandle - swimming with manatees!',

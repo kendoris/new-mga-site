@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ImageGallery from '@/components/ImageGallery';
 
-type Category = 'all' | 'vintage' | 'restoration' | 'shows' | 'trips';
+type Category = 'all' | 'vintage' | 'restoration' | 'shows' | 'trips' | 'press';
 
 const galleryCategories: Record<Category, string> = {
   all: 'All Photos',
@@ -12,6 +12,7 @@ const galleryCategories: Record<Category, string> = {
   restoration: 'Restoration',
   shows: 'Car Shows',
   trips: 'Road Trips',
+  press: 'Press & Media',
 };
 
 const galleryImages: Array<{ src: string; alt: string; caption?: string; category: Category }> = [
@@ -118,6 +119,17 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
   { src: '/images/IMG_3301.jpeg', alt: 'Ken on the beach', caption: 'Manatees 2024 - Panhandle beach', category: 'trips' },
   { src: '/images/IMG_3299.jpeg', alt: 'Melon on the beach', caption: 'Manatees 2024 - Crystal clear water', category: 'trips' },
   { src: '/images/IMG_3289.jpeg', alt: 'MGA in Rosemary Beach', caption: 'Manatees 2024 - Rosemary Beach', category: 'trips' },
+
+  // Press & Media - WSJ Article 2022
+  { src: '/images/wsj/wsj-hero.jpg', alt: 'Ken and Melon with the MGA in Beaufort', caption: 'WSJ "My Ride" Feature - October 2022', category: 'press' },
+  { src: '/images/wsj/wsj-car-solo.jpg', alt: 'The 1962 MG MGA in Old English White', caption: 'WSJ 2022 - $800 over 50 years ago', category: 'press' },
+  { src: '/images/wsj/wsj-side-profile.jpg', alt: 'MGA side profile under Spanish moss', caption: 'WSJ 2022 - Built 1955-1962', category: 'press' },
+  { src: '/images/wsj/wsj-interior-seats.jpg', alt: 'Restored red leather interior', caption: 'WSJ 2022 - Extensive restoration', category: 'press' },
+  { src: '/images/wsj/wsj-interior-overview.jpg', alt: 'Interior overview from rear', caption: 'WSJ 2022 - Interior overview', category: 'press' },
+  { src: '/images/wsj/wsj-luggage-rack.jpg', alt: 'Luggage rack and MG logo', caption: 'WSJ 2022 - Classic details', category: 'press' },
+  { src: '/images/wsj/wsj-steering-wheel.jpg', alt: 'Steering wheel and instrument panel', caption: 'WSJ 2022 - Driver\'s view', category: 'press' },
+  { src: '/images/wsj/wsj-dashboard.jpg', alt: 'Dashboard with MG badge', caption: 'WSJ 2022 - "Wherever it goes, it draws a crowd"', category: 'press' },
+  { src: '/images/wsj/wsj-toy-mga.jpg', alt: 'Ken and Melon with toy MGA model', caption: 'WSJ 2022 - Model and the real thing', category: 'press' },
 ];
 
 const galleryVideos = [
