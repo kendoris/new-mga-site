@@ -23,8 +23,8 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Title */}
-          <Link href="/" className="text-white font-bold text-xl">
-            1962 MGA 1600 MKII
+          <Link href="/" className="text-white font-bold text-lg md:text-xl hover:text-[var(--nav-hover)] transition-colors">
+            1962 MGA 1600 MKII <span className="hidden sm:inline">- A Journey Since 1968</span>
           </Link>
 
           {/* Desktop Navigation */}
