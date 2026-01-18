@@ -101,6 +101,19 @@ export default function WSJArticlePage() {
             MG, an English car company, built the MGA model from 1955 to 1962.
           </p>
 
+          {/* Behind the scenes */}
+          <div className="relative aspect-[3/4] w-full max-w-md mx-auto mb-2">
+            <ClickableImage
+              src="/images/wsj/wsj-behind-scenes.jpg"
+              alt="Melon during the WSJ photoshoot with photographer Daniel Roa working in the background"
+              fill
+              className="object-cover rounded-lg shadow-lg"
+            />
+          </div>
+          <p className="text-center text-sm text-[var(--foreground)] opacity-60 mb-8">
+            Behind the scenes: Melon during the photoshoot
+          </p>
+
           <ContentCard className="mb-8">
             <div className="prose max-w-none text-lg leading-relaxed space-y-4">
               <p>
@@ -193,19 +206,6 @@ export default function WSJArticlePage() {
           </div>
           <p className="text-center text-sm text-[var(--foreground)] opacity-60 mb-8">
             Ken and Melon with a toy version of the MGA, and the real thing behind.
-          </p>
-
-          {/* Behind the scenes */}
-          <div className="relative aspect-[3/4] w-full max-w-md mx-auto mb-2">
-            <ClickableImage
-              src="/images/wsj/wsj-behind-scenes.jpg"
-              alt="Melon during the WSJ photoshoot with photographer Daniel Roa working in the background"
-              fill
-              className="object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <p className="text-center text-sm text-[var(--foreground)] opacity-60 mb-8">
-            Behind the scenes: Melon during the photoshoot
           </p>
 
           <ContentCard className="mb-8 bg-amber-50 border border-amber-200">
