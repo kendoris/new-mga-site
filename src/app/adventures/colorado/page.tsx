@@ -122,6 +122,7 @@ export default function ColoradoPage() {
                 controls
                 className="w-full max-w-xl mx-auto rounded-lg shadow-lg"
                 preload="metadata"
+                poster="/images/Bridge-thumb.jpg"
               >
                 <source src="/images/Bridge.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -244,6 +245,7 @@ export default function ColoradoPage() {
                 controls
                 className="w-full max-w-xl mx-auto rounded-lg shadow-lg"
                 preload="metadata"
+                poster="/images/RoyalGorgeBridgeOverview-thumb.jpg"
               >
                 <source src="/images/RoyalGorgeBridgeOverview.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -261,6 +263,7 @@ export default function ColoradoPage() {
                 controls
                 className="w-full max-w-xl mx-auto rounded-lg shadow-lg"
                 preload="metadata"
+                poster="/images/MelonBridge-thumb.jpg"
               >
                 <source src="/images/MelonBridge.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

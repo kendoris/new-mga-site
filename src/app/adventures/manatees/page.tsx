@@ -95,6 +95,7 @@ export default function ManateesPage() {
                 controls
                 className="w-full max-w-xl mx-auto rounded-lg shadow-lg"
                 preload="metadata"
+                poster="/images/IMG_3287-thumb.jpg"
               >
                 <source src="/images/IMG_3287.mov" type="video/mp4" />
                 Your browser does not support the video tag.

@@ -105,6 +105,7 @@ export default function AnniversaryPage() {
               controls
               className="w-full rounded-lg shadow-lg"
               preload="metadata"
+              poster="/images/HighRoad-thumb.jpg"
             >
               <source src="/images/HighRoad.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -216,6 +217,7 @@ export default function AnniversaryPage() {
               controls
               className="w-full rounded-lg shadow-lg"
               preload="metadata"
+              poster="/images/CavernClub-thumb.jpg"
             >
               <source src="/images/CavernClub.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -227,6 +229,7 @@ export default function AnniversaryPage() {
               controls
               className="w-full rounded-lg shadow-lg"
               preload="metadata"
+              poster="/images/Mersey-thumb.jpg"
             >
               <source src="/images/Mersey.mp4" type="video/mp4" />
               Your browser does not support the video tag.
