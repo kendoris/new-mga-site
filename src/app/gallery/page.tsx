@@ -135,13 +135,13 @@ const galleryImages: Array<{ src: string; alt: string; caption?: string; categor
 ];
 
 const galleryVideos = [
-  { src: '/images/HighRoad.mp4', title: 'Scottish Highlands', caption: '50th Anniversary Trip - Driving the High Road' },
-  { src: '/images/CavernClub.mp4', title: 'The Cavern Club', caption: '50th Anniversary Trip - Inside the famous Beatles venue' },
-  { src: '/images/Mersey.mp4', title: 'Ferry Cross the Mersey', caption: '50th Anniversary Trip - Liverpool waterfront' },
-  { src: '/images/Bridge.mp4', title: 'Mississippi River Crossing', caption: 'Colorado GT-47 - Historic Cairo Bridge' },
-  { src: '/images/RoyalGorgeBridgeOverview.mp4', title: 'Royal Gorge Bridge', caption: 'Colorado GT-47 - 955 feet above the Arkansas River' },
-  { src: '/images/MelonBridge.mp4', title: 'Melon Crosses the Bridge', caption: 'Colorado GT-47 - Braving the Royal Gorge' },
-  { src: '/images/IMG_3287.mov', title: 'After Swimming with Manatees', caption: 'Manatees 2024 - Melon back on the boat' },
+  { src: '/images/HighRoad.mp4', poster: '/images/HighRoad-thumb.jpg', title: 'Scottish Highlands', caption: '50th Anniversary Trip - Driving the High Road' },
+  { src: '/images/CavernClub.mp4', poster: '/images/CavernClub-thumb.jpg', title: 'The Cavern Club', caption: '50th Anniversary Trip - Inside the famous Beatles venue' },
+  { src: '/images/Mersey.mp4', poster: '/images/Mersey-thumb.jpg', title: 'Ferry Cross the Mersey', caption: '50th Anniversary Trip - Liverpool waterfront' },
+  { src: '/images/Bridge.mp4', poster: '/images/Bridge-thumb.jpg', title: 'Mississippi River Crossing', caption: 'Colorado GT-47 - Historic Cairo Bridge' },
+  { src: '/images/RoyalGorgeBridgeOverview.mp4', poster: '/images/RoyalGorgeBridgeOverview-thumb.jpg', title: 'Royal Gorge Bridge', caption: 'Colorado GT-47 - 955 feet above the Arkansas River' },
+  { src: '/images/MelonBridge.mp4', poster: '/images/MelonBridge-thumb.jpg', title: 'Melon Crosses the Bridge', caption: 'Colorado GT-47 - Braving the Royal Gorge' },
+  { src: '/images/IMG_3287.mov', poster: '/images/IMG_3287-thumb.jpg', title: 'After Swimming with Manatees', caption: 'Manatees 2024 - Melon back on the boat' },
 ];
 
 export default function GalleryPage() {
@@ -202,6 +202,7 @@ export default function GalleryPage() {
                   controls
                   className="w-full rounded-lg"
                   preload="metadata"
+                  poster={video.poster}
                 >
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.
