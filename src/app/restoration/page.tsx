@@ -57,7 +57,8 @@ export default function RestorationPage() {
               rebuild. Since then they have been running fine, with trips to Key West, Gatlinburg,
               and Watkins Glen all completed during 2006. Now we&apos;ve put over 24,000 miles on the
               car since the head rebuild in 2005. In July of 2010 we did a 2400 mile, 8 day round
-              trip to Cape Breton in Nova Scotia.
+              trip to Cape Breton in Nova Scotia. Now in 2026 we&apos;ve put over 80,000 miles on the
+              car since 2005, including a 4,100 mile round trip to Colorado in 2022.
             </p>
           </div>
         </ContentCard>
