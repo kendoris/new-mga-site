@@ -30,7 +30,7 @@ export default function RestorationPage() {
         </h1>
 
         <ContentCard className="mb-8">
-          <div className="text-lg leading-relaxed space-y-4 italic">
+          <div className="text-xl leading-relaxed space-y-4">
             <p>
               In February of 2004 the car was transported to Sports Car Haven in St. James, NY
               for mechanical work - suspension and engine rebuild. After disassembly, the
