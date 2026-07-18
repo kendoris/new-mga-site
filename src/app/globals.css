@@ -30,7 +30,7 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-  font-size: 133%;
+  font-size: 115%;
 }
 
 /* Custom scrollbar for webkit browsers */
