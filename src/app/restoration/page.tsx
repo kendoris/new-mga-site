@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import ClickableImage, { PageLightboxManager } from '@/components/ClickableImage';
 import ContentCard from '@/components/ContentCard';
 
@@ -13,6 +14,30 @@ const restorationImages = [
   { src: '/images/wheel_well.jpg', alt: 'Wheel well restoration', caption: 'December 2004 - Wheel well' },
   { src: '/images/left_front.jpg', alt: 'Installing fender liners', caption: 'December 2004 - Installing fender liners' },
   { src: '/images/back_with_bumper.jpg', alt: 'Rear with bumper', caption: 'December 2004 - Electricals sorted out' },
+];
+
+const storyPages = [
+  {
+    title: 'First Steps in 30 Years!',
+    subtitle: 'October 2004',
+    description: 'After 31 years in the garage, the MGA is finally out on the road again. Kyle said "Wow, this really runs like a real car!"',
+    image: '/images/ken_and_kyle_mga.jpg',
+    href: '/history/first-steps',
+  },
+  {
+    title: 'Body Work',
+    subtitle: 'Almost Done - December 2004',
+    description: 'The body is finished in the original Old English White - perfectly matched by the ICI paint computer at Performance Auto Body.',
+    image: '/images/frontwithbumper.jpg',
+    href: '/history/body-work',
+  },
+  {
+    title: 'Our First Award',
+    subtitle: 'September 2005',
+    description: 'We tied for first place in the People\'s Choice Award with a gorgeous \'69 Shelby Mustang at a Southampton charity rally!',
+    image: '/images/IMG_0153.JPG',
+    href: '/history/first-award',
+  },
 ];
 
 export default function RestorationPage() {
@@ -109,6 +134,50 @@ export default function RestorationPage() {
             />
           </div>
         </ContentCard>
+
+        <h2 className="text-3xl font-bold text-[var(--nav-bg)] mt-12 mb-6 text-center">
+          Continue the Restoration Story
+        </h2>
+
+        <div className="space-y-6">
+          {storyPages.map((page, index) => (
+            <motion.div
+              key={page.href}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <Link href={page.href}>
+                <ContentCard className="hover:shadow-xl transition-shadow cursor-pointer">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="relative w-full md:w-48 aspect-[4/3] flex-shrink-0">
+                      <Image
+                        src={page.image}
+                        alt={page.title}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-[var(--nav-bg)] mb-1">
+                        {page.title}
+                      </h3>
+                      <p className="text-sm text-[var(--foreground)] opacity-70 mb-2">
+                        {page.subtitle}
+                      </p>
+                      <p className="text-[var(--foreground)]">
+                        {page.description}
+                      </p>
+                      <span className="inline-block mt-3 text-[var(--nav-bg)] font-semibold">
+                        Read more &rarr;
+                      </span>
+                    </div>
+                  </div>
+                </ContentCard>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
       </div>
     </>
