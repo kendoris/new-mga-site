@@ -18,18 +18,18 @@ const restorationImages = [
 
 const storyPages = [
   {
-    title: 'First Steps in 30 Years!',
-    subtitle: 'October 2004',
-    description: 'After 31 years in the garage, the MGA is finally out on the road again. Kyle said "Wow, this really runs like a real car!"',
-    image: '/images/ken_and_kyle_mga.jpg',
-    href: '/history/first-steps',
-  },
-  {
     title: 'Body Work',
     subtitle: 'Almost Done - December 2004',
     description: 'The body is finished in the original Old English White - perfectly matched by the ICI paint computer at Performance Auto Body.',
     image: '/images/frontwithbumper.jpg',
     href: '/history/body-work',
+  },
+  {
+    title: 'First Steps in 30 Years!',
+    subtitle: 'October 2004',
+    description: 'After 31 years in the garage, the MGA is finally out on the road again. Kyle said "Wow, this really runs like a real car!"',
+    image: '/images/ken_and_kyle_mga.jpg',
+    href: '/history/first-steps',
   },
   {
     title: 'Our First Award',
@@ -55,7 +55,7 @@ export default function RestorationPage() {
         </h1>
 
         <ContentCard className="mb-8">
-          <div className="text-[22px] leading-relaxed space-y-4">
+          <div className="text-lg leading-relaxed space-y-4">
             <p>
               In February of 2004 the car was transported to Sports Car Haven in St. James, NY
               for mechanical work - suspension and engine rebuild. After disassembly, the
