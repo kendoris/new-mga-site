@@ -121,9 +121,8 @@ export default function RestorationPage() {
             The Result
           </h2>
           <p className="text-lg leading-relaxed">
-            The completed restoration revealed the true beauty of the 1962 MGA
-            1600 MKII - a testament to British automotive craftsmanship and
-            the dedication of those who worked to preserve it.
+            The completed restoration shows the car probably as good or better
+            than it left the factory!
           </p>
           <div className="relative w-full aspect-[4/3] mt-6">
             <ClickableImage
